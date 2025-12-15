@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/seminar3.dir/tests/test_seminar3.cpp.o CMakeFiles/seminar3.dir/main.cpp.o -o seminar3  /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a -lpthread /usr/local/lib/libgtest.a

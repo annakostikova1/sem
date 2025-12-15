@@ -1,0 +1,3 @@
+/Users/user/Desktop/cpp_labs/seminar3_simple/build/CMakeFiles/seminar3.dir
+/Users/user/Desktop/cpp_labs/seminar3_simple/build/CMakeFiles/edit_cache.dir
+/Users/user/Desktop/cpp_labs/seminar3_simple/build/CMakeFiles/rebuild_cache.dir
