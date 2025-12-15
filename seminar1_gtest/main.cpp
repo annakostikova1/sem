@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <chrono>
 #include <iomanip>
 using namespace std;
 
@@ -21,14 +20,10 @@ void print_array(const vector<int>& arr) {
 
 template <typename Func>
 void test_sort(const string& name, Func sort_func, vector<int> arr) {
-    auto start = chrono::high_resolution_clock::now();
     sort_func(arr);
-    auto end = chrono::high_resolution_clock::now();
-    
-    auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
     
     cout << left << setw(30) << name 
-         << " | Время: " << setw(8) << duration.count() << " мкс | Результат: ";
+         << " | Результат: ";
     print_array(arr);
     cout << endl;
 }
@@ -53,3 +48,22 @@ int main() {
     
     return 0;
 }
+
+"""
+cd ~/Desktop/cpp_labs/seminar1_gtest
+
+rm -f sorting_demo
+
+g++ -std=c++17 -Iinclude main.cpp -o sorting_demo
+
+./sorting_demo
+"""
+'''
+g++ -std=c++17 -Iinclude \
+    $(find src -name "*.cpp" 2>/dev/null) \
+    $(find tests -name "*.cpp" 2>/dev/null) \
+    -lgtest -lgtest_main -pthread \
+    -o tests_gtest
+
+./tests_gtest
+'''
